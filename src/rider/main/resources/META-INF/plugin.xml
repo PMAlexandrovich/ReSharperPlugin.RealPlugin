@@ -1,0 +1,27 @@
+<idea-plugin require-restart="true">
+  <id>realplugin-rider</id>
+  <name>RealPlugin</name>
+  <version>_PLACEHOLDER_</version>
+  <vendor url="https://project-url">Author</vendor>
+  <idea-version since-build="_PLACEHOLDER_" until-build="_PLACEHOLDER_" />
+  <depends>com.intellij.modules.rider</depends>
+
+  <description>
+<![CDATA[
+<p>Sample description</p>
+]]>
+  </description>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <toolWindow id="TreeToolWindow" anchor="left" secondary="true"
+                factoryClass="com.jetbrains.rider.plugins.realplugin.TreeToolWindowFactory" />
+    <projectViewPane implementation="com.jetbrains.rider.plugins.realplugin.explorer.CQSExplorer" id="CQSExplorer" order="first, before SolutionExplorer"/>
+  </extensions>
+
+  <actions>
+    <action id="ActionSendExtMessage" class="com.jetbrains.rider.plugins.realplugin.TestAction"
+            text="Action Send Ext Message" description="Do Something Description">
+    </action>
+  </actions>
+
+</idea-plugin>
